@@ -1,3 +1,9 @@
+interface Hello {
+    hello():void
+}
+
+
+
 abstract class RpgGame {
     abstract attack():void
     abstract defence():void
@@ -5,10 +11,11 @@ abstract class RpgGame {
     fightingStyle():void{}
 }
 
-class Orges extends RpgGame {
+class Orges extends RpgGame implements Hello {
     override attack():void{console.log('attack with club')}
     override defence():void{console.log('defence with a sheild')}
     fightingStyle():void{}
+    hello():void{console.log('just to show interfare functionality')}
 }
 
 class Peons extends RpgGame {
